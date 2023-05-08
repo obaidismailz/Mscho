@@ -1,0 +1,103 @@
+.mainContainer{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.title{
+    text-align: center;
+    width:100%;
+}
+
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: auto auto ;
+    column-gap:15px ;
+    row-gap:50px;
+    margin: auto;
+    width: 70%;
+}
+
+table, td, th {
+    border-collapse: collapse;
+    padding: 10px 0px;
+}
+
+table{
+    width: 100%;
+}
+
+th,td{
+    border-bottom: 1px solid rgb(177, 176, 176);
+    text-align: center;
+}
+
+tr{
+    transition: background-color 0.5s;
+}
+
+tr:hover {
+    background-color: #e27a71;
+}
+
+.imageDiv{
+    flex-grow: 1;
+}
+
+h3,p{
+   margin:0;
+}
+
+.emptyDiv{
+    background-color:hsl(229, 17%, 19%);
+    width: 100px;
+    transition: background-color 0.5s
+}
+
+.col{
+    flex-grow: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.row{
+    border: 3px solid hsl(229, 17%, 19%);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: border-color 0.5s;
+}
+
+.row:hover{
+    border-color: #e27a71;
+}
+
+.row:hover .emptyDiv{
+    background-color: #e27a71;
+}
+
+.logoPic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.tinyPic{
+    width: 130px;
+    height: 130px;
+    margin: 5px;
+}
+
+th{
+    background-color: hsl(229, 17%, 19%);
+    color: white;
+}
+

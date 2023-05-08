@@ -1,0 +1,46 @@
+.classList{
+    display: flex;
+}
+
+.students{
+    flex-grow: 8;
+    margin-left:10%;
+    margin-right:14%
+}
+
+.sidelist {
+    position: fixed;
+    height: 719px;
+    background-color: hsl(229, 17%, 19%);
+}
+
+#classesList {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    height: inherit;
+}
+
+.item {
+    flex-grow: 2;
+}
+
+.classes{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    height: 100%;
+    line-height: 64px;
+    font-size: 1.2em;
+    transition: background-color 0.5s;
+}
+
+.classes:hover{
+    background-color: #e27a71;
+}

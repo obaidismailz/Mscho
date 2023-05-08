@@ -1,0 +1,88 @@
+ <div className="list">
+          <ul>
+          <li className="item">
+              <button>Students</button>
+            </li>
+            <li className="item">
+              <button href="#">Teachers</button>
+            </li>
+            <li className="item">
+              <button href="#">Classes</button>
+            </li>
+            <li className="item">
+              <button href="#">Fee</button>
+            </li>
+            <li className="item">
+              <button href="#">Logout</button>
+            </li>
+          </ul>
+        </div>
+
+        <div className="list">
+              <button>Students</button>
+              <button>Teachers</button>
+              <button>Classes</button>
+              <button>Fee</button>
+              <button>Logout</button>
+        </div>
+
+
+
+        const [students, setStudents] = useState([]);
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [grade, setGrade] = useState('');
+
+  const handleAdd = () => {
+    const newStudent = {
+      name: name,
+      age: age,
+      grade: grade
+    };
+    setStudents([...students, newStudent]);
+    setName('');
+    setAge('');
+    setGrade('');
+  };
+
+  const handleDelete = (index) => {
+    const newStudents = [...students];
+    newStudents.splice(index, 1);
+    setStudents(newStudents);
+  };
+  <div className="App">
+      <header className="App-header">
+      <h1>School Management System</h1>
+      </header>
+      <div>
+        <h2>Add Student</h2>
+        <label>Name:</label>
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        <label>Age:</label>
+        <input type="number" value={age} onChange={(e) => setAge(e.target.value)} />
+        <label>Grade:</label>
+        <input type="text" value={grade} onChange={(e) => setGrade(e.target.value)} />
+        <button onClick={handleAdd}>Add</button>
+      </div>
+      <div>
+        <h2>Students</h2>
+        {students.length === 0 ? <p>No students yet.</p> :
+          <ul>
+            {students.map((student, index) => (
+              <li key={index}>
+                <span>{student.name}, {student.age}, {student.grade}</span>
+                <button onClick={() => handleDelete(index)}>Delete</button>
+              </li>
+            ))}
+          </ul>
+        }
+      </div>
+      <div>
+        <h2>Classes</h2>
+        <ul>
+          <li>Mathematics</li>
+          <li>Science</li>
+          <li>History</li>
+        </ul>
+      </div>
+    </div>

@@ -1,0 +1,70 @@
+.loginContainer {
+    width: 35%;
+    height: 520px;
+    margin: 9% auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 10px #b6b6b6;
+    border: solid hsl(229, 17%, 19%) 2px;
+    border-radius: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.companyLogo {
+    display: block;
+    margin: auto;
+    width: 90px;
+    height: 70px;
+}
+
+.simpleContainer {
+    flex-grow: 1;
+    background-color: hsl(229, 17%, 19%);
+    width: 100%;
+}
+
+.formContainer {
+    flex-grow: 9;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.labels {
+    flex-grow: 5;
+    font-size: 1.2em;
+}
+
+.inputs {
+    width: 240px;
+    height: 30px;
+    margin: 0px 15px;
+    border: 2px solid #e27a71;
+    border-radius: 5px;
+    background-color: #ebe9e9;
+}
+
+.buttons {
+    color: white;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    font-size: 1em;
+    background-color: hsl(229, 17%, 19%);
+    border-radius: 5px;
+    line-height: 28px;
+    transition: background-color 0.5s;
+}
+
+.buttons:hover {
+    background-color: #e27a71;
+}
